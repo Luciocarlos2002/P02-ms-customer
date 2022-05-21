@@ -1,6 +1,8 @@
 spring:
   application:
-    name: MS-CUSTOMER
+    name: ms-customer
+  servlet:
+    context-path: /ms-customer
   data:
     mongodb:
       uri: mongodb+srv://lucio2022:lucio123@bootcamp-may.ucmqo.mongodb.net/Bootcamp-May?retryWrites=true&w=majority
