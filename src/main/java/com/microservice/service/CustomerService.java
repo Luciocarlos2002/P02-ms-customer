@@ -50,8 +50,13 @@ public class CustomerService implements CustomerServiceImpl {
                 break;
         }
         return customerRepository.findById(id).flatMap(newCustomer -> {
-            customer.setId(newCustomer.getId());
-            return customerRepository.save(customer);
+            newCustomer.setFullName(customer.getFullName());
+            newCustomer.setNumberIdentity(customer.getNumberIdentity());
+            newCustomer.setTypeCustomer(customer.getTypeCustomer());
+            newCustomer.setTypeProfile(customer.getTypeProfile());
+            newCustomer.setPhoneNumber(customer.getPhoneNumber());
+            newCustomer.setEmailCustomer(customer.getEmailCustomer());
+            return customerRepository.save(newCustomer);
         }).switchIfEmpty(Mono.empty());
     }
 

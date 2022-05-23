@@ -11,7 +11,7 @@ public class Customer {
     @Id
     private String id;
     private String fullName;
-    private Integer numberIdentity;
+    private Long numberIdentity;
     private String typeCustomer;
     private String typeProfile;
     private Integer phoneNumber;
